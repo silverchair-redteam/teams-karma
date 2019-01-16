@@ -1,0 +1,13 @@
+version: '2'
+services:
+  karma:
+    image: atlassianlabs/karma
+    environment:
+      - LOCAL_BASE_URL
+      - PORT=3020
+      - NODE_ENV=production
+      - MONGOHQ_URL=mongodb://mongo:27017/karma
+    ports:
+      - 3024:3024
+  mongo:
+      image: mongo:3.4
